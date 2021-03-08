@@ -6,6 +6,9 @@ Install an OpenVPN server inside a kubernetes cluster. New certificates are gene
 ### troubleshoot 
 Troubleshoot application connectivity issues in your K8s cluster.
 
+### sriov-dpdk
+This is a collection of Kubernetes SRIOV/DPDK Examples yaml files the are tested to work with Platform9 Free Teir Kubernetes.
+
 ### nginx
 An NGINX Ingress controller is used as entry point for clients to publicly access the services on a kubernetes cluster. In a absence of an ingress the services are typically exposed to outside via a kubernetes resoure of the type loadbalancer. Loadbalancers are expensive resources in cloud and using them for every service is just not practicle even in your on-premises private cloud. Ingress controllers not only solve this problem but also provide additional features like SSL termination, host based or path based routing and the list goes on and on. Ingress controller can typically do both host based and path based routing to kubernetes services.
 Ingress overcome restrictions with using kubernetes serivices like nodePort where one is restricted to use port number 30000 and above. Cloud loadbalancers also overcomes this restriction but at higher cost as the services that are exposed grow the number of load balancers that required also keep growing. Cloud load balancers are expensive items. This is where an ingress controller has an advantage as it can expose multiple services using a single cloud loadbalancer.
